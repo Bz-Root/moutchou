@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Website</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+	<servlet>
+		<servlet-name>Connexion</servlet-name>
+		<servlet-class>org.stock.controller.servlets.session.Connexion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Connexion</servlet-name>
+		<url-pattern>/connexion</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Inscription</servlet-name>
+		<servlet-class>org.stock.controller.servlets.session.Inscription</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Inscription</servlet-name>
+		<url-pattern>/inscrires</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Consultation</servlet-name>
+		<servlet-class>org.stock.controller.servlets.user.Consultation</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Consultation</servlet-name>
+		<url-pattern>/consultation</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Deconnexion</servlet-name>
+		<servlet-class>org.stock.controller.servlets.session.Deconnexion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Deconnexion</servlet-name>
+		<url-pattern>/deconnexion</url-pattern>
+	</servlet-mapping>
+</web-app>
